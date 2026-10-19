@@ -1,0 +1,2 @@
+alter table if exists public.juror_topic_assignments
+  drop constraint if exists juror_subsection_assignments_subsection_id_assessor_slot_key;

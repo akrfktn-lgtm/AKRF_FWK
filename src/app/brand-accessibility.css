@@ -1,0 +1,295 @@
+:root {
+  --green: #2e6b42;
+  --green-dark: #214c32;
+  --green-soft: #e8f1ea;
+  --sidebar: #262223;
+  --felda-orange: #f6911f;
+  --felda-orange-strong: #a84200;
+  --felda-orange-soft: #fff0e6;
+  --ink: #262223;
+  --muted: #5b655e;
+  --line: #dce2dc;
+}
+
+html,
+body {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.sidebar {
+  background: var(--sidebar);
+}
+
+.nav-item.active,
+.phase-switch > button.selected,
+.section-tabs button.chosen,
+.yes-no-control button.answer-active,
+.question-tabs-trigger[data-state="active"] {
+  background: var(--felda-orange-soft);
+  border-color: var(--felda-orange);
+  color: var(--felda-orange-strong);
+}
+
+.button-primary,
+.new-question-actions .question-add-button,
+.question-save-button,
+.auth-submit {
+  border-color: var(--felda-orange-strong);
+  background: var(--felda-orange-strong);
+  color: #fff;
+}
+
+.button-primary:hover,
+.new-question-actions .question-add-button:hover,
+.question-save-button:hover:not(:disabled),
+.auth-submit:hover:not(:disabled) {
+  border-color: #873500;
+  background: #873500;
+}
+
+.button-outline,
+.question-add-button,
+.question-cancel-button,
+.text-button,
+.panel-footer-link,
+.summary-view,
+.banner-link,
+.auth-mode-toggle {
+  color: var(--felda-orange-strong);
+}
+
+.button-outline,
+.question-add-button {
+  border-color: var(--felda-orange);
+}
+
+.question-add-button:hover,
+.question-config-table :is(textarea, select, input):focus,
+.weight-input-wrap input:focus,
+.auth-form input:focus {
+  border-color: var(--felda-orange);
+}
+
+.ranking-intro {
+  background: linear-gradient(115deg, #262223, #a84200);
+}
+
+.progress-track i,
+.live-dot,
+.season-dot,
+.eyebrow-line,
+.footer-status {
+  background-color: var(--felda-orange);
+}
+
+.total-score,
+.report-summary > strong,
+.weight-total,
+.weight-note strong {
+  color: var(--felda-orange-strong);
+}
+
+.nav-caption,
+.workspace-tag,
+.brand-sub,
+.season-chip,
+.eyebrow,
+.banner-kicker,
+.form-step,
+.form-actions > span,
+.question-copy > span,
+.question-count,
+.assessment-topic-label,
+.field-hint,
+.status-pill,
+.table-bottom,
+.report-state,
+.question-tab-meta,
+.topic-question-count,
+.weight-note,
+.auth-kicker,
+.auth-mode-toggle {
+  font-size: 12px;
+}
+
+.nav-item,
+.page-heading p,
+.section-heading p,
+.activity-main > span,
+.field-label,
+.question-input > label,
+.question-section-heading > div > p,
+.topic-customizer-heading p,
+.topic-config-card input,
+.question-config-table td,
+.phase-two-detail th,
+.phase-two-detail td,
+.report-summary small,
+.signature-strip span {
+  font-size: 13px;
+}
+
+.question-copy strong,
+.table-panel td,
+.question-config-table select,
+.question-config-table textarea,
+.question-config-table input,
+.weight-overview-heading p {
+  font-size: 14px;
+}
+
+.auth-form label,
+.auth-mode-toggle {
+  font-size: 12px;
+}
+
+.auth-brand small,
+.auth-kicker,
+.auth-message {
+  font-size: 11px;
+}
+
+.field-label select,
+.field-label > input,
+.question-input input,
+.question-input select,
+.subjective-input textarea,
+.auth-form input {
+  font-size: 14px;
+}
+
+.table-panel th,
+.question-config-table th {
+  font-size: 12px;
+}
+
+.question-copy > span,
+.assessment-topic-label {
+  line-height: 1.45;
+}
+
+:is(button, input, select, textarea, summary):focus-visible {
+  outline: 3px solid var(--felda-orange);
+  outline-offset: 2px;
+}
+
+@media (max-width: 620px) {
+  .page-heading p,
+  .section-heading p,
+  .metric-detail,
+  .phase-switch button small,
+  .question-copy > span,
+  .field-label,
+  .table-bottom,
+  .status-pill {
+    font-size: 12px;
+  }
+
+  .metric-top > span,
+  .heading-meta span:not(.meta-icon) {
+    font-size: 11px;
+  }
+
+  .phase-switch button strong {
+    font-size: 13px;
+  }
+}
+
+.skip-link {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 1000;
+  padding: 10px 14px;
+  transform: translateY(-150%);
+  border-radius: 6px;
+  background: var(--fg-900);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  box-shadow: var(--shadow-md);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+#main-content {
+  scroll-margin-top: 76px;
+}
+
+#main-content:focus {
+  outline: none;
+}
+
+.sidebar {
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.configuration-workspace-tabs-list {
+  position: sticky;
+  top: 65px;
+  z-index: 9;
+  padding: 8px 0;
+  background: color-mix(in srgb, var(--cream) 92%, transparent);
+  backdrop-filter: blur(10px);
+}
+
+.configuration-workspace-tabs-trigger {
+  min-height: 44px;
+}
+
+@media (max-width: 820px) {
+  .configuration-workspace-tabs-list {
+    top: 58px;
+  }
+}
+
+@media (max-width: 620px) {
+  .sidebar {
+    overscroll-behavior: contain;
+  }
+
+  .topbar-left {
+    min-width: 0;
+  }
+
+  .breadcrumb {
+    min-width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .breadcrumb strong {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .mobile-menu,
+  .notification-button {
+    width: 40px;
+    height: 40px;
+  }
+
+  .configuration-workspace-tabs-list {
+    padding: 6px 0;
+  }
+
+  .configuration-workspace-tabs-trigger {
+    min-height: 44px;
+    padding: 7px 12px;
+    line-height: 1.35;
+  }
+
+  .page-heading > .button {
+    min-height: 40px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skip-link {
+    transition: none;
+  }
+}

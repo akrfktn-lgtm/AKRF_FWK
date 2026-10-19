@@ -1,0 +1,63 @@
+.report-ranch-picker{display:flex;align-items:center;gap:12px;width:min(100%,460px);margin:0 0 18px;color:#647067;font-size:10px;font-weight:700}
+.report-ranch-picker select{flex:1;min-width:0;height:38px;padding:0 11px;border:1px solid #dfe5df;border-radius:4px;background:#fff;color:#25352b;font:600 11px var(--font-body)}
+.excel-export-panel{display:grid;gap:14px;margin:0 0 18px;padding:14px;border:1px solid #dfe5df;border-left:3px solid #3d714e;border-radius:4px;background:#f8faf7}
+.excel-export-heading{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.excel-export-heading h3{margin:0;color:#294737;font-size:13px}
+.excel-export-heading span{display:block;margin-top:4px;color:#647067;font-size:10px}
+.excel-export-options{display:grid;grid-template-columns:minmax(220px,1fr) 2fr;align-items:end;gap:18px}
+.excel-section-picker{display:flex;flex-wrap:wrap;gap:8px 14px;margin:0;padding:0;border:0}
+.excel-section-picker legend{margin-bottom:7px;color:#647067;font-size:10px;font-weight:700}
+.excel-section-picker label{display:flex;align-items:center;gap:6px;color:#34473a;font-size:10px;cursor:pointer}
+.excel-section-picker input{accent-color:#3d714e}
+.report-print-heading{display:none}
+.ranch-report-table tfoot{border-top:2px solid #dce4dc;background:#f4f7f3}
+.ranch-report-table tfoot th{height:42px;padding:0 10px;color:#294737;font-size:9px;text-align:left}
+.ranch-report-table tfoot th:not(:first-child){text-align:right}
+.ranch-report-table td{text-align:right}
+.ranch-report-table td:first-child,.phase-one-report td:nth-child(2),.phase-one-report td:nth-child(3){text-align:left}
+.report-phase-switch{display:flex;width:fit-content;gap:3px;margin:0 0 15px;padding:3px;border:1px solid #dfe5df;border-radius:4px;background:#f1f4f0}
+.report-phase-switch button{min-height:34px;padding:0 13px;border:0;border-radius:3px;background:transparent;color:#637067;font-size:10px;font-weight:600;cursor:pointer}
+.report-phase-switch button.selected{background:#fff;color:#294737;box-shadow:0 1px 3px #24382b1a}
+.phase-two-report{display:grid;gap:16px}
+.phase-two-block{display:grid;gap:10px;padding:16px;border:1px solid #e3e8e3;border-radius:5px;background:#fff;break-inside:avoid}
+.phase-two-block>header{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-bottom:9px;border-bottom:1px solid #e7ebe7}
+.phase-two-block>header>div>span{color:#748078;font-size:8px;font-weight:700;letter-spacing:.7px}
+.phase-two-block>header h3{margin:4px 0 0;color:#25382c;font-size:15px}
+.phase-two-block h4{margin:3px 0;color:#314739;font-size:10px}
+.phase-two-detail{break-inside:avoid}
+.phase-two-detail table{width:100%;border-collapse:collapse}
+.phase-two-detail th,.phase-two-detail td{padding:8px;border-bottom:1px solid #e9ede9;text-align:left;vertical-align:top;font-size:9px}
+.phase-two-detail th{color:#6c786f;font-size:8px;letter-spacing:.3px}
+.phase-two-detail td:first-child{white-space:nowrap;font-weight:700}
+.phase-two-detail td:nth-child(2){min-width:220px}
+.phase-two-block>.panel{margin:0}
+.phase-one-report{margin-top:0}
+@media(max-width:620px){
+  .report-ranch-picker{align-items:stretch;flex-direction:column;gap:6px}
+  .report-ranch-picker select{width:100%}
+  .excel-export-heading{align-items:stretch;flex-direction:column}
+  .excel-export-options{grid-template-columns:1fr;gap:12px}
+  .ranch-report-table .table-scroll{overflow-x:auto}
+  .report-phase-switch{width:100%}
+  .report-phase-switch button{flex:1;padding:0 7px;font-size:9px}
+  .phase-two-block{padding:11px}
+  .phase-two-detail .table-scroll{overflow-x:auto}
+  .phase-two-detail table{min-width:680px}
+}
+@media print{
+  .report-ranch-picker,.report-phase-switch{display:none!important}
+  .report-print-heading{display:block!important;margin:0 0 14px;padding-bottom:8px;border-bottom:1px solid #dfe4df}
+  .report-print-heading>span{color:#647067;font-size:8px;font-weight:700;letter-spacing:.6px}
+  .report-print-heading h2{margin:5px 0;font-size:18px}
+  .report-print-heading p{margin:0;color:#4a554d;font-size:10px}
+  .ranch-report-table{break-inside:auto!important}
+  .ranch-report-table .table-scroll{overflow:visible}
+  .ranch-report-table table{width:100%;min-width:0;table-layout:fixed}
+  .ranch-report-table th,.ranch-report-table td{padding:0 5px;font-size:7px}
+  .ranch-report-table tfoot{display:table-row-group}
+  .phase-two-block{padding:8px;border:0;border-top:1px solid #dfe4df;border-radius:0}
+  .phase-two-detail{break-inside:avoid-page}
+  .phase-two-detail table{table-layout:fixed}
+  .phase-two-detail th,.phase-two-detail td{padding:5px;font-size:7px}
+  .signature-strip{break-inside:avoid}
+}

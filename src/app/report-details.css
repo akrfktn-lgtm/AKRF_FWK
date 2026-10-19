@@ -1,0 +1,18 @@
+.phase-two-detail{overflow:hidden;border:1px solid var(--line);border-radius:4px;background:var(--white);break-inside:avoid}
+.phase-two-detail>summary{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:11px 13px;cursor:pointer;list-style:none;color:var(--green-dark);background:var(--canvas);transition:background .15s ease}
+.phase-two-detail>summary::-webkit-details-marker{display:none}
+.phase-two-detail>summary:hover{background:var(--green-soft)}
+.phase-two-detail>summary:focus-visible{outline:2px solid var(--green-dark);outline-offset:-2px}
+.phase-two-detail>summary>div{display:flex;align-items:center;gap:12px;min-width:0}
+.phase-two-detail>summary h4{margin:0;color:var(--green-dark);font-size:10px}
+.phase-two-detail>summary span{color:var(--muted);font-size:9px;font-weight:700;font-variant-numeric:tabular-nums}
+.phase-two-detail>summary svg{flex:none;color:var(--muted);transition:transform .15s ease}
+.phase-two-detail[open]>summary{border-bottom:1px solid var(--line)}
+.phase-two-detail[open]>summary svg{transform:rotate(180deg)}
+.phase-two-detail>.table-scroll{padding:0 10px 8px}
+@media(prefers-reduced-motion:reduce){.phase-two-detail>summary,.phase-two-detail>summary svg{transition:none}}
+@media print{
+  details.phase-two-detail:not([open])>.table-scroll{display:block!important}
+  .phase-two-detail>summary{display:none}
+  .phase-two-detail>.table-scroll{padding:0}
+}
